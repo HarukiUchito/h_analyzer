@@ -1,0 +1,6 @@
+[submodule "h_analyzer_frontend"]
+	path = h_analyzer_frontend
+	url = https://github.com/HarukiUchito/h_analyzer_frontend.git
+[submodule "h_analyzer_backend"]
+	path = h_analyzer_backend
+	url = https://github.com/HarukiUchito/h_analyzer_backend.git
