@@ -1,0 +1,15 @@
+syntax = "proto3";
+package grpc_fs;
+
+service FileSystem {
+    rpc List (ListRequest) returns (ListResponse) {}
+}
+
+message ListRequest {
+    string path = 1;
+}
+
+message ListResponse {
+    repeated string files = 1;
+    repeated string directories = 2;
+}
