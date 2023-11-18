@@ -13,3 +13,15 @@ message ListResponse {
     repeated string files = 1;
     repeated string directories = 2;
 }
+
+service PolarsService {
+    rpc LoadDataframe(FilenameRequest) returns (stream DataframeBytes) {}
+}
+
+message DataframeBytes {
+    bytes data = 1;
+}
+
+message FilenameRequest {
+    string filename = 1;
+}
