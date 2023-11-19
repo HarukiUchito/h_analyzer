@@ -1,11 +1,15 @@
 syntax = "proto3";
 package grpc_fs;
 
-service FileSystem {
-    rpc List (ListRequest) returns (ListResponse) {}
+message Empty {
 }
 
-message ListRequest {
+service FileSystem {
+    rpc DefaultPath (Empty) returns (PathMessage) {}
+    rpc List (PathMessage) returns (ListResponse) {}
+}
+
+message PathMessage {
     string path = 1;
 }
 
