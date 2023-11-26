@@ -19,8 +19,9 @@ message ListResponse {
 }
 
 enum DataFrameType {
-    NDEV = 0;
-    KITTI = 1;
+    COMMA_SEP = 0;
+    NDEV = 1;
+    KITTI = 2;
 }
 
 service PolarsService {
