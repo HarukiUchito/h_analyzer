@@ -24,11 +24,22 @@ enum DataFrameType {
     KITTI = 2;
 }
 
-service PolarsService {
-    rpc LoadDataframe(FileLoadRequest) returns (stream DataframeBytes) {}
+message DataFrameInfo {
+    DataFrameType type = 1;
+    string path = 2;
 }
 
-message DataframeBytes {
+message DataFrameInfoList {
+    repeated DataFrameInfo list = 1;
+}
+
+service PolarsService {
+    rpc SaveDataFrameList(DataFrameInfoList) returns (Empty) {}
+    rpc InitialDataFrameList(Empty) returns (DataFrameInfoList) {}
+    rpc LoadDataFrame(FileLoadRequest) returns (stream DataFrameBytes) {}
+}
+
+message DataFrameBytes {
     bytes data = 1;
 }
 
