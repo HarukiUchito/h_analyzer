@@ -25,8 +25,8 @@ enum DataFrameType {
 }
 
 message DataFrameInfo {
-    DataFrameType type = 1;
-    string path = 2;
+    DataFrameType df_type = 1;
+    string df_path = 2;
 }
 
 message DataFrameInfoList {
