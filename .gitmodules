@@ -4,3 +4,6 @@
 [submodule "h_analyzer_backend"]
 	path = h_analyzer_backend
 	url = https://github.com/HarukiUchito/h_analyzer_backend.git
+[submodule "h_analyzer_client_lib"]
+	path = h_analyzer_client_lib
+	url = https://github.com/HarukiUchito/h_analyzer_client_lib.git
