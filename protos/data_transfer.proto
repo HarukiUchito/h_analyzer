@@ -28,7 +28,17 @@ message SendPoint2DStampedRequest {
     Point2DStamped point = 2;
 }
 
+message SeriesIDList {
+    repeated SeriesID list = 1;
+}
+
+message PollPoint2DSeriesResponse {
+    repeated Point2D points = 1;
+}
+
 service DataTransfer2D {
+    rpc GetSeriesList(Empty) returns (SeriesIDList) {}
+    rpc PollPoint2DQueue(SeriesID) returns (PollPoint2DSeriesResponse) {}
     rpc ConnectToNewSeries(SeriesID) returns (Empty) {}
     rpc ClearSeries(SeriesID) returns (Empty) {}
     rpc SendPoint(SendPoint2DRequest) returns (Empty) {}
