@@ -7,6 +7,6 @@
 [submodule "h_analyzer_client_lib"]
 	path = h_analyzer_client_lib
 	url = https://github.com/HarukiUchito/h_analyzer_client_lib.git
-[submodule "h_analyzer_grpc"]
-	path = h_analyzer_grpc
-	url = https://github.com/HarukiUchito/h_analyzer_grpc.git
+[submodule "h_analyzer_data"]
+	path = h_analyzer_data
+	url = https://github.com/HarukiUchito/h_analyzer_data.git
